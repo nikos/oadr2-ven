@@ -1,4 +1,4 @@
-package com.enernoc.open.oadr2.model.v20b;
+package openadr.model.v20b;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -34,7 +34,7 @@ import openadr.model.v20b.xcal.DurationValue;
 
 /**
  * Some sanity checking for our JAXB-generated models
- * 
+ *
  * @author <a href='mailto:tnichols@enernoc.com'>Thom Nichols</a>
  *
  */
@@ -43,13 +43,13 @@ public class OadrSignedObjectTest {
     JAXBContext jaxbContext;
     Marshaller marshaller;
     DatatypeFactory xmlDataTypeFac;
-    
+
     SchemaFactory sf = SchemaFactory.newInstance( XMLConstants.W3C_XML_SCHEMA_NS_URI );
     Schema schema;
     Validator validator;
-    
+
     ObjectFactory of = new ObjectFactory();
-    
+
     @Before public void setup() throws Exception {
         this.jaxbContext = JAXBContext.newInstance(
                 "openadr.model.v20b:" +
@@ -66,17 +66,17 @@ public class OadrSignedObjectTest {
                 "openadr.model.v20b.xcal:" +
                 "openadr.model.v20b.xmldsig:" +
                 "openadr.model.v20b.xmldsig11" );
-        
+
         this.marshaller = jaxbContext.createMarshaller();
         xmlDataTypeFac = DatatypeFactory.newInstance();
 
         schema = sf.newSchema( getClass().getResource("/schema/2.0b/oadr_20b.xsd") );
         this.validator = schema.newValidator();
     }
-    
+
     @Test public void testSerialize() throws Exception {
         final Duration duration = xmlDataTypeFac.newDuration( true, 0, 0, 0, 0, 5, 0 );
-        
+
         OadrSignedObject payload = new OadrSignedObject()
             .withOadrCreateReport( new OadrCreateReport()
                 .withRequestID( "1234" )
@@ -97,20 +97,20 @@ public class OadrSignedObjectTest {
                                                 .withPulseFactor( .01f ) ))))));
 
         assertEquals("1234", payload.getOadrCreateReport().getRequestID());
-        
+
         StringWriter out = new StringWriter();
         this.marshaller.marshal(payload, out);
-        
+
         assertNotNull(out.toString());
-        
+
         assertTrue(out.toString().length() > 0);
-        
+
         assertEquals( .01f, ((PulseCountType)payload.getOadrCreateReport()
                 .getOadrReportRequests().get(0)
                 .getReportSpecifier().getSpecifierPayloads().get(0)
                     .getItemBase().getValue()).getPulseFactor(), 0 );
-        
-        
+
+
         assertEquals( 0, validate(out.toString()) );
     }
 
@@ -122,7 +122,7 @@ public class OadrSignedObjectTest {
 
         return errorCollector.errors.size();
     }
-    
+
     class ErrorCollector extends DefaultHandler {
         List<SAXParseException> errors = new ArrayList<SAXParseException>();
         @Override public void error( SAXParseException e ) throws SAXException {

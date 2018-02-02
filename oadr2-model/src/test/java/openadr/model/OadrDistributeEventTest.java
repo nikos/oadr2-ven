@@ -1,4 +1,4 @@
-package com.enernoc.open.oadr2.model;
+package openadr.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -31,7 +31,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * Some sanity checking for our JAXB-generated models
- * 
+ *
  * @author <a href='mailto:tnichols@enernoc.com'>Tom Nichols</a>
  *
  */
@@ -40,13 +40,13 @@ public class OadrDistributeEventTest {
     JAXBContext jaxbContext;
     Marshaller marshaller;
     DatatypeFactory xmlDataTypeFac;
-    
+
     SchemaFactory sf = SchemaFactory.newInstance( XMLConstants.W3C_XML_SCHEMA_NS_URI );
     Schema schema;
     Validator validator;
-    
+
     ObjectFactory of = new ObjectFactory();
-    
+
     @Before public void setup() throws Exception {
         this.jaxbContext = JAXBContext.newInstance("openadr.model");
         this.marshaller = jaxbContext.createMarshaller();
@@ -55,7 +55,7 @@ public class OadrDistributeEventTest {
         schema = sf.newSchema( getClass().getResource("/schema/2.0a/oadr_20a.xsd") );
         this.validator = schema.newValidator();
     }
-    
+
     @Test public void testSerialize() throws Exception {
         final XMLGregorianCalendar startDttm = xmlDataTypeFac.newXMLGregorianCalendar("2012-01-01T00:00:00Z");
         OadrDistributeEvent distribEventPayload = new OadrDistributeEvent()
@@ -101,20 +101,20 @@ public class OadrDistributeEventTest {
             );
 
         assertEquals("test-123", distribEventPayload.getRequestID());
-        
+
         StringWriter out = new StringWriter();
         this.marshaller.marshal(distribEventPayload, out);
-        
+
         assertNotNull(out.toString());
-        
+
         assertTrue(out.toString().length() > 0);
-        
+
         assertEquals(1.0f, ((SignalPayload)distribEventPayload.getOadrEvents().get(0).getEiEvent()
                 .getEiEventSignals().getEiEventSignals().get(0)
                 .getIntervals().getIntervals().get(0).getStreamPayloadBase().getValue())
                 .getPayloadFloat().getValue(), 0);
-        
-        
+
+
         assertEquals( 0, validate(out.toString()) );
     }
 
@@ -126,7 +126,7 @@ public class OadrDistributeEventTest {
 
         return errorCollector.errors.size();
     }
-    
+
     class ErrorCollector extends DefaultHandler {
         List<SAXParseException> errors = new ArrayList<SAXParseException>();
         @Override public void error( SAXParseException e ) throws SAXException {
