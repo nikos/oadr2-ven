@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>org.jvnet.jaxb2_commons</groupId>
 			<artifactId>jaxb2-basics-runtime</artifactId>
-			<version>0.6.1</version>
+			<version>0.11.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jvnet.jaxb2_commons</groupId>
@@ -76,7 +76,7 @@
 						<plugin>
 							<groupId>org.jvnet.jaxb2_commons</groupId>
 							<artifactId>jaxb2-basics</artifactId>
-							<version>0.6.1</version>
+							<version>0.11.1</version>
 						</plugin>
 						<plugin>
 							<groupId>org.jvnet.jaxb2_commons</groupId>
@@ -104,7 +104,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<generatePackage>com.enernoc.open.oadr2.model</generatePackage>
+							<generatePackage>openadr.model</generatePackage>
 							<schemaIncludes>
                 <include>2.0a/*.xsd</include>
 							</schemaIncludes>

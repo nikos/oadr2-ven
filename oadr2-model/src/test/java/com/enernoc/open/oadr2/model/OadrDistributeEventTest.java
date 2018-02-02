@@ -20,9 +20,9 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
-import com.enernoc.open.oadr2.model.OadrDistributeEvent.OadrEvent;
-import com.enernoc.open.oadr2.model.Properties.Tolerance;
-import com.enernoc.open.oadr2.model.Properties.Tolerance.Tolerate;
+import openadr.model.OadrDistributeEvent.OadrEvent;
+import openadr.model.Properties.Tolerance;
+import openadr.model.Properties.Tolerance.Tolerate;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
@@ -48,7 +48,7 @@ public class OadrDistributeEventTest {
     ObjectFactory of = new ObjectFactory();
     
     @Before public void setup() throws Exception {
-        this.jaxbContext = JAXBContext.newInstance("com.enernoc.open.oadr2.model");
+        this.jaxbContext = JAXBContext.newInstance("openadr.model");
         this.marshaller = jaxbContext.createMarshaller();
         xmlDataTypeFac = DatatypeFactory.newInstance();
 

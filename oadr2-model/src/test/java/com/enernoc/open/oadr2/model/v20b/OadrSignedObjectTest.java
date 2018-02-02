@@ -26,11 +26,11 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.enernoc.open.oadr2.model.v20b.ei.ReadingTypeEnumeratedType;
-import com.enernoc.open.oadr2.model.v20b.ei.ReportSpecifier;
-import com.enernoc.open.oadr2.model.v20b.ei.SpecifierPayload;
-import com.enernoc.open.oadr2.model.v20b.xcal.DurationPropType;
-import com.enernoc.open.oadr2.model.v20b.xcal.DurationValue;
+import openadr.model.v20b.ei.ReadingTypeEnumeratedType;
+import openadr.model.v20b.ei.ReportSpecifier;
+import openadr.model.v20b.ei.SpecifierPayload;
+import openadr.model.v20b.xcal.DurationPropType;
+import openadr.model.v20b.xcal.DurationValue;
 
 /**
  * Some sanity checking for our JAXB-generated models
@@ -52,20 +52,20 @@ public class OadrSignedObjectTest {
     
     @Before public void setup() throws Exception {
         this.jaxbContext = JAXBContext.newInstance(
-                "com.enernoc.open.oadr2.model.v20b:" +
-                "com.enernoc.open.oadr2.model.v20b.atom:" +
-                "com.enernoc.open.oadr2.model.v20b.currency:" +
-                "com.enernoc.open.oadr2.model.v20b.ei:" +
-                "com.enernoc.open.oadr2.model.v20b.emix:" +
-                "com.enernoc.open.oadr2.model.v20b.gml:" +
-                "com.enernoc.open.oadr2.model.v20b.greenbutton:" +
-                "com.enernoc.open.oadr2.model.v20b.power:" +
-                "com.enernoc.open.oadr2.model.v20b.pyld:" +
-                "com.enernoc.open.oadr2.model.v20b.siscale:" +
-                "com.enernoc.open.oadr2.model.v20b.strm:" +
-                "com.enernoc.open.oadr2.model.v20b.xcal:" +
-                "com.enernoc.open.oadr2.model.v20b.xmldsig:" +
-                "com.enernoc.open.oadr2.model.v20b.xmldsig11" );
+                "openadr.model.v20b:" +
+                "openadr.model.v20b.atom:" +
+                "openadr.model.v20b.currency:" +
+                "openadr.model.v20b.ei:" +
+                "openadr.model.v20b.emix:" +
+                "openadr.model.v20b.gml:" +
+                "openadr.model.v20b.greenbutton:" +
+                "openadr.model.v20b.power:" +
+                "openadr.model.v20b.pyld:" +
+                "openadr.model.v20b.siscale:" +
+                "openadr.model.v20b.strm:" +
+                "openadr.model.v20b.xcal:" +
+                "openadr.model.v20b.xmldsig:" +
+                "openadr.model.v20b.xmldsig11" );
         
         this.marshaller = jaxbContext.createMarshaller();
         xmlDataTypeFac = DatatypeFactory.newInstance();

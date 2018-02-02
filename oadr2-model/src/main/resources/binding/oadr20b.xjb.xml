@@ -18,13 +18,13 @@
   
   <bindings schemaLocation="../schema/2.0b/oadr_20b.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b" />         
+      <package name="openadr.model.v20b" />
     </schemaBindings>
   </bindings>
   
 	<bindings schemaLocation="../schema/2.0b/oadr_ei_20b.xsd">
 	  <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.ei" />  	      
+      <package name="openadr.model.v20b.ei" />
 	  </schemaBindings>
 
 		<bindings node="//xs:complexType[@name='QualifiedEventIDType']">
@@ -85,7 +85,7 @@
 	
 	<bindings schemaLocation="../schema/2.0b/oadr_emix_20b.xsd">	
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.emix" />
+      <package name="openadr.model.v20b.emix" />
     </schemaBindings>
 	  <bindings node="//xs:simpleType[@name='MarketContextType']">
 			<class name="MarketContext"/>
@@ -94,7 +94,7 @@
 	
 	<bindings schemaLocation="../schema/2.0b/oadr_strm_20b.xsd">
     <schemaBindings>
-	    <package name="com.enernoc.open.oadr2.model.v20b.strm" />
+	    <package name="openadr.model.v20b.strm" />
     </schemaBindings>
 	    
 		<bindings node="//xs:complexType[@name='StreamPayloadBaseType']">
@@ -108,7 +108,7 @@
 	
 	<bindings schemaLocation="../schema/2.0b/oadr_xcal_20b.xsd">
     <schemaBindings>  
-      <package name="com.enernoc.open.oadr2.model.v20b.xcal" />
+      <package name="openadr.model.v20b.xcal" />
     </schemaBindings>
 		<bindings node="//xs:simpleType[@name='DateTimeType']">
 			<class name="DateTime"/>
@@ -121,52 +121,52 @@
 	
   <bindings schemaLocation="../schema/2.0b/oadr_atom.xsd">
      <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.atom" />
+      <package name="openadr.model.v20b.atom" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_gml_20b.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.gml" />
+      <package name="openadr.model.v20b.gml" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_greenbutton.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.greenbutton" />
+      <package name="openadr.model.v20b.greenbutton" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_power_20b.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.power" />
+      <package name="openadr.model.v20b.power" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_pyld_20b.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.pyld" />
+      <package name="openadr.model.v20b.pyld" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_siscale_20b.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.siscale" />
+      <package name="openadr.model.v20b.siscale" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_xml.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.xml" />
+      <package name="openadr.model.v20b.xml" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_xmldsig.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.xmldsig" />
+      <package name="openadr.model.v20b.xmldsig" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_xmldsig11.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.xmldsig11" />
+      <package name="openadr.model.v20b.xmldsig11" />
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../schema/2.0b/oadr_ISO_ISO3AlphaCurrencyCode_20100407.xsd">
     <schemaBindings>
-      <package name="com.enernoc.open.oadr2.model.v20b.currency" />
+      <package name="openadr.model.v20b.currency" />
     </schemaBindings>
   </bindings>
 </bindings> 
