@@ -9,10 +9,10 @@ import javax.xml.bind.annotation.XmlSchema;
 
 import org.jivesoftware.smack.packet.PacketExtension;
 
-import com.enernoc.open.oadr2.model.OadrCreatedEvent;
-import com.enernoc.open.oadr2.model.OadrDistributeEvent;
-import com.enernoc.open.oadr2.model.OadrRequestEvent;
-import com.enernoc.open.oadr2.model.OadrResponse;
+import openadr.model.OadrCreatedEvent;
+import openadr.model.OadrDistributeEvent;
+import openadr.model.OadrRequestEvent;
+import openadr.model.OadrResponse;
 
 /**
  * Packet extensions are created by XMPP extension implementations 
