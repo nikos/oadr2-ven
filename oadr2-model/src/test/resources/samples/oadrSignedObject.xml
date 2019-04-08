@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:oadrSignedObject xmlns:ns2="http://docs.oasis-open.org/ns/emix/2011/06/siscale"
+                      xmlns:ns1="http://openadr.org/oadr-2.0b/2012/07"
+                      xmlns:ns4="http://docs.oasis-open.org/ns/emix/2011/06/power"
+                      xmlns:ns3="http://www.w3.org/2005/Atom"
+                      xmlns:ns6="urn:ietf:params:xml:ns:icalendar-2.0:stream"
+                      xmlns:ns5="urn:ietf:params:xml:ns:icalendar-2.0"
+                      xmlns:ns8="http://www.opengis.net/gml/3.2"
+                      xmlns:ns7="http://docs.oasis-open.org/ns/energyinterop/201110"
+                      xmlns:ns13="http://www.w3.org/2009/xmldsig11#"
+                      xmlns:ns9="http://docs.oasis-open.org/ns/emix/2011/06"
+                      xmlns:ns12="http://naesb.org/espi"
+                      xmlns:ns11="http://www.w3.org/2000/09/xmldsig#"
+                      xmlns:ns10="http://docs.oasis-open.org/ns/energyinterop/201110/payloads"
+                      xmlns:ns14="urn:un:unece:uncefact:codelist:standard:5:ISO42173A:2010-04-07">
+  <ns1:oadrCreateReport ns7:schemaVersion="2.0b">
+    <ns10:requestID>1234</ns10:requestID>
+    <ns1:oadrReportRequest>
+      <ns7:reportRequestID>request-1234</ns7:reportRequestID>
+      <ns7:reportSpecifier>
+        <ns7:reportSpecifierID>1234</ns7:reportSpecifierID>
+        <ns5:granularity>
+          <ns5:duration>P0Y0M0DT0H5M0S</ns5:duration>
+        </ns5:granularity>
+        <ns7:reportBackDuration>
+          <ns5:duration>P0Y0M0DT0H5M0S</ns5:duration>
+        </ns7:reportBackDuration>
+        <ns7:specifierPayload>
+          <ns7:rID>report 1234</ns7:rID>
+          <ns1:pulseCount>
+            <ns1:itemDescription>pulse count</ns1:itemDescription>
+            <ns1:itemUnits>count</ns1:itemUnits>
+            <ns1:pulseFactor>0.01</ns1:pulseFactor>
+          </ns1:pulseCount>
+          <ns7:readingType>Direct Read</ns7:readingType>
+        </ns7:specifierPayload>
+      </ns7:reportSpecifier>
+    </ns1:oadrReportRequest>
+    <ns7:venID>Vtn-1234</ns7:venID>
+  </ns1:oadrCreateReport>
+</ns1:oadrSignedObject>
